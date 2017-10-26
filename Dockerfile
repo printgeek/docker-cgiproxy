@@ -81,7 +81,8 @@ RUN     cd /opt/cgiproxy/ && wget http://www.jmarshall.com/tools/cgiproxy/releas
 
 RUN service mysql start && \
     mysql -u root -p mysql -e "CREATE DATABASE cgiproxy; GRANT ALL PRIVILEGES ON cgiproxy.* TO cgiproxy@localhost IDENTIFIED BY 'cgiproxy1'; FLUSH PRIVILEGES; SHOW DATABASES;"
-RUN cd /opt/cgiproxy/ && chmod +x nph-proxy.cgi && ./nph-proxy.cgi install-modules && ./nph-proxy.cgi init
+RUN cd /opt/cgiproxy/ && chmod +x nph-proxy.cgi && ./nph-proxy.cgi install-modules
+RUN cd /opt/cgiproxy/ && ./nph-proxy.cgi init
 
 RUN grep -E "RUN_AS_USER|PROXY_DIR|SECRET_PATH|FCGI_SOCKET|USER_FACING_PORT|RUNNING_ON_SSL_SERVER|RUNNING_ON_SSL_SERVER|ALLOW_RTMP_PROXY|LOCAL_LIB_DIR|DB_DRIVER|DB_DRIVER|DB_SERVER|DB_NAME|DB_USER|DB_PASS|USE_DB_FOR_COOKIES" /opt/cgiproxy/nph-proxy.cgi
 
