@@ -32,7 +32,7 @@ RUN     mkdir /var/run/cgiproxy/ && \
 
 
 #Get CGIPROXY SOURCE
-RUN     cd /opt/cgiproxy/ && wget http://www.jmarshall.com/tools/cgiproxy/releases/cgiproxy.latest.tar.gz && tar zxf cgiproxy.latest.tar.gz
+RUN     cd /opt/cgiproxy/ && wget http://www.jmarshall.com/tools/cgiproxy/releases/cgiproxy.2.1.17.tar.gz && tar zxf cgiproxy.2.1.17.tar.gz
 
 #Configure CGIPROXY VARS
         RUN FIRST="RUN_AS_USER= '" && \
