@@ -46,8 +46,8 @@ RUN     cd /opt/cgiproxy/ && wget http://www.jmarshall.com/tools/cgiproxy/releas
         sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
         FIRST="FCGI_SOCKET= " && \
         SECOND="\$FCGI_SOCKET= '/var/run/cgiproxy/cgiproxy.fcgi.socket' ;" && \
-#        SECOND="\$FCGI_SOCKET= 8002 ;" && \
-       sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
+        SECOND="\$FCGI_SOCKET= 8002 ;" && \
+        sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
         FIRST="USER_FACING_PORT= " && \
         SECOND="\$USER_FACING_PORT= 443 ;" && \
         sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
