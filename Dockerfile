@@ -58,21 +58,21 @@ RUN     cd /opt/cgiproxy/ && wget http://www.jmarshall.com/tools/cgiproxy/releas
         FIRST="ALLOW_RTMP_PROXY= " && \
         SECOND="\$ALLOW_RTMP_PROXY= 1 ;" && \
         sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
-        FIRST="DB_DRIVER= '" && \
-        SECOND="\$DB_DRIVER= 'MySQL' ;" && \
-        sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
-        FIRST="DB_SERVER= '" && \
-        SECOND="\$DB_SERVER= \"localhost:3306\" ;" && \
-        sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
-        FIRST="DB_NAME= '" && \
-        SECOND="\$DB_NAME= 'cgiproxy' ;" && \
-        sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
-        FIRST="DB_USER= '" && \
-        SECOND="\$DB_USER= 'cgiproxy' ;" && \
-        sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
-        FIRST="DB_PASS= '" && \
-        SECOND="\$DB_PASS= 'cgiproxy1' ;" && \
-        sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
+        #FIRST="DB_DRIVER= '" && \
+        #SECOND="\$DB_DRIVER= 'MySQL' ;" && \
+        #sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
+        #FIRST="DB_SERVER= '" && \
+        #SECOND="\$DB_SERVER= \"localhost:3306\" ;" && \
+        #sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
+        #FIRST="DB_NAME= '" && \
+        #SECOND="\$DB_NAME= 'cgiproxy' ;" && \
+        #sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
+        #FIRST="DB_USER= '" && \
+        #SECOND="\$DB_USER= 'cgiproxy' ;" && \
+        #sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
+        #FIRST="DB_PASS= '" && \
+        #SECOND="\$DB_PASS= 'cgiproxy1' ;" && \
+        #sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi && \
         FIRST="USE_DB_FOR_COOKIES= " && \
         SECOND="\$USE_DB_FOR_COOKIES= 1 ;" && \
         sed -i "0,/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/s/^.*$(echo $FIRST | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g').*/$(echo $SECOND | sed -e 's/\\/\\\\/g; s/\//\\\//g; s/&/\\\&/g')/g" /opt/cgiproxy/nph-proxy.cgi
@@ -94,4 +94,5 @@ RUN     apt-get clean ; rm -rf /tmp/* /var/tmp/* ; rm -rf /var/lib/apt/lists/* ;
 WORKDIR /opt/cgiproxy
 
 #Start
-CMD	["/bin/bash", "-c", "service mysql start; sudo -u www-data ./nph-proxy.cgi start-fcgi"]
+#CMD	["/bin/bash", "-c", "service mysql start; sudo -u www-data ./nph-proxy.cgi start-fcgi"]
+CMD	["/bin/bash", "-c", "sudo -u www-data ./nph-proxy.cgi start-fcgi"]
